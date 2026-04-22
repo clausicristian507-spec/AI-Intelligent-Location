@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_02092f99340ea27d2969270035ad9231 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed; bottom:30px; left:30px; z-index:1000;
+background:white; padding:12px; border-radius:8px; font-size:13px;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+<b>📍 Cluster Commerciali</b><br>
+<span style="color:blue">●</span> Cluster 0 - Centro<br>
+<span style="color:green">●</span> Cluster 1 - Centro<br>
+<span style="color:red">●</span> Cluster 2 - Centro<br>
+<span style="color:orange">●</span> Cluster 3 - Quattromiglia<br>
+<span style="color:purple">●</span> Cluster 4 - Quattromiglia (più denso)<br>
+<span style="color:gray">●</span> Punti isolati
+</div>
+    
+            <div class="folium-map" id="map_02092f99340ea27d2969270035ad9231" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_02092f99340ea27d2969270035ad9231 = L.map(
+                "map_02092f99340ea27d2969270035ad9231",
+                {
+                    center: [39.348, 16.185],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c05e78ff5a6b927429c11498706a0ed4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c05e78ff5a6b927429c11498706a0ed4.addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            var circle_marker_f7cb78b2d16da182601cf979af66d712 = L.circleMarker(
+                [39.35309014245903, 16.17412098962836],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_f7cb78b2d16da182601cf979af66d712.bindTooltip(
+                `<div>
+                     Cluster 0 | Supermercato Conad Centro | 186 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f7b3b35ee44ce78067defd9381e87a1 = L.circleMarker(
+                [39.351185207096485, 16.176015441853306],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_5f7b3b35ee44ce78067defd9381e87a1.bindTooltip(
+                `<div>
+                     Cluster 0 | Bar Centrale | 256 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a93536e0a3d2afcf62ac8830fe9d79cb = L.circleMarker(
+                [39.353543065614296, 16.180590583707605],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_a93536e0a3d2afcf62ac8830fe9d79cb.bindTooltip(
+                `<div>
+                     Cluster 1 | Farmacia Rende | 64 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a35c20b5416fa589b64874823307e476 = L.circleMarker(
+                [39.35616908956922, 16.182215399739984],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_a35c20b5416fa589b64874823307e476.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Pizzeria da Mario | 139 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e0ed8e958787291da1c5068e7e22dd1 = L.circleMarker(
+                [39.35089753987583, 16.18051410484357],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_7e0ed8e958787291da1c5068e7e22dd1.bindTooltip(
+                `<div>
+                     Cluster 1 | Abbigliamento Moda | 91 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_133629577ead7db37104220f3fe9e6e3 = L.circleMarker(
+                [39.35089758912915, 16.179653055152833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_133629577ead7db37104220f3fe9e6e3.bindTooltip(
+                `<div>
+                     Cluster 1 | Tabacchi Centro | 173 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52c822ed3397ac6424e5d22a6f0f3e6d = L.circleMarker(
+                [39.35633763844652, 16.179096688913233],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_52c822ed3397ac6424e5d22a6f0f3e6d.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Ristorante Calabria | 254 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58f9af1cb3ab8b328410251ea7d2758d = L.circleMarker(
+                [39.35390230418746, 16.175564434028896],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_58f9af1cb3ab8b328410251ea7d2758d.bindTooltip(
+                `<div>
+                     Cluster 0 | Panetteria Tradizione | 228 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e881faac02b5382303084052c57bb540 = L.circleMarker(
+                [39.33812210245626, 16.19212062316642],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_e881faac02b5382303084052c57bb540.bindTooltip(
+                `<div>
+                     ⚫ Isolato | McDonald's Quattromiglia | 162 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c3372cbf8592b62ceb3630cb724c203 = L.circleMarker(
+                [39.34217024017435, 16.19315744491616],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_8c3372cbf8592b62ceb3630cb724c203.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Bar Università | 451 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_146f6dc5163f4acc35c903712b8e2519 = L.circleMarker(
+                [39.338146329228756, 16.199228488904875],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_146f6dc5163f4acc35c903712b8e2519.bindTooltip(
+                `<div>
+                     Cluster 2 | Supermercato Lidl | 330 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bda54e94ccb6b1241ff914ec18ea2949 = L.circleMarker(
+                [39.338137080985724, 16.196374473158276],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_bda54e94ccb6b1241ff914ec18ea2949.bindTooltip(
+                `<div>
+                     Cluster 2 | Pizzeria Quattromiglia | 340 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb0ef27a74eeeed1151c51d47ded0b1a = L.circleMarker(
+                [39.34096784908627, 16.18794783937855],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_eb0ef27a74eeeed1151c51d47ded0b1a.bindTooltip(
+                `<div>
+                     Cluster 3 | Farmacia Universitaria | 151 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d170c95d04969263d0d647e6c06cb9a7 = L.circleMarker(
+                [39.33234687902137, 16.19629633587758],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_d170c95d04969263d0d647e6c06cb9a7.bindTooltip(
+                `<div>
+                     Cluster 4 | Caffè dello Studente | 195 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d063d1830c8bc4def07681f8b5aafd0 = L.circleMarker(
+                [39.33310032866995, 16.193459670878337],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_4d063d1830c8bc4def07681f8b5aafd0.bindTooltip(
+                `<div>
+                     Cluster 4 | Ristorante Pizzeria | 487 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3fc65aeff699f5d2bc4fc82eb3caa1c = L.circleMarker(
+                [39.33775084988304, 16.192292311998777],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_b3fc65aeff699f5d2bc4fc82eb3caa1c.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Abbigliamento Jeans | 321 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ccab1928fa7e0bea00609ca8559b91c = L.circleMarker(
+                [39.335948675518665, 16.197446705155365],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_0ccab1928fa7e0bea00609ca8559b91c.bindTooltip(
+                `<div>
+                     Cluster 2 | Tabacchi Quattromiglia | 330 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ba57518cfd8c326516d9fb2f07d59da = L.circleMarker(
+                [39.34125698933038, 16.199123998089984],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_9ba57518cfd8c326516d9fb2f07d59da.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Kebab Express | 336 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b142c9bf2c6fef183c570bd93b3c905 = L.circleMarker(
+                [39.33636790369792, 16.198725120476464],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_8b142c9bf2c6fef183c570bd93b3c905.bindTooltip(
+                `<div>
+                     Cluster 2 | Libreria Universitaria | 242 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4350ce1fff1558ad9ed6e962aced95f = L.circleMarker(
+                [39.334350785194665, 16.19164312990711],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_d4350ce1fff1558ad9ed6e962aced95f.bindTooltip(
+                `<div>
+                     Cluster 4 | Gelateria Quattromiglia | 270 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_827ff27d10d42fbeb3567a8a0aae8f66 = L.circleMarker(
+                [39.34939694630676, 16.184072362872445],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_827ff27d10d42fbeb3567a8a0aae8f66.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Centro Commerciale Roges | 740 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95047717762ab038c519ab4aba88c1bb = L.circleMarker(
+                [39.34432267109854, 16.18599379029421],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_95047717762ab038c519ab4aba88c1bb.bindTooltip(
+                `<div>
+                     Cluster 3 | Zara Roges | 235 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_231e37ff85c7c2770cb2cd469a98812e = L.circleMarker(
+                [39.345202584614064, 16.187926635381366],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_231e37ff85c7c2770cb2cd469a98812e.bindTooltip(
+                `<div>
+                     Cluster 3 | H&M Roges | 724 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a7c70cbe9db76586e4326346ebcb655 = L.circleMarker(
+                [39.34072575544136, 16.18356247728646],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_4a7c70cbe9db76586e4326346ebcb655.bindTooltip(
+                `<div>
+                     Cluster 3 | Supermercato Eurospin | 359 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e32f8d1322875b06296b1b715f827c3b = L.circleMarker(
+                [39.343366851826424, 16.184443023070006],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_e32f8d1322875b06296b1b715f827c3b.bindTooltip(
+                `<div>
+                     Cluster 3 | McDonald's Roges | 442 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ebc450e2279737bef61554d62a5bf66 = L.circleMarker(
+                [39.34533276776913, 16.18168099507798],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_1ebc450e2279737bef61554d62a5bf66.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Burger King | 285 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_592f51fcdea17dd5a962e391c053723f = L.circleMarker(
+                [39.34154701926773, 16.181411380127756],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_592f51fcdea17dd5a962e391c053723f.bindTooltip(
+                `<div>
+                     Cluster 3 | Ottica Roges | 777 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_350fa42e822725e40bb4662426e84f2e = L.circleMarker(
+                [39.346127094055035, 16.187437577467183],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_350fa42e822725e40bb4662426e84f2e.bindTooltip(
+                `<div>
+                     Cluster 3 | Gioielleria Roges | 756 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_715df1d5e610fa2f30fc7d6f9a16bb45 = L.circleMarker(
+                [39.34319808393024, 16.18906872008571],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_715df1d5e610fa2f30fc7d6f9a16bb45.bindTooltip(
+                `<div>
+                     Cluster 3 | Profumeria Douglas | 773 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7fb1fdb9ada1d02e6e778890d0795f7 = L.circleMarker(
+                [39.344124918750616, 16.18478396963526],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_e7fb1fdb9ada1d02e6e778890d0795f7.bindTooltip(
+                `<div>
+                     Cluster 3 | Scarpe & Scarpe | 227 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26feb5a56df4d00891d750855230110c = L.circleMarker(
+                [39.34319488016331, 16.188010598693676],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_26feb5a56df4d00891d750855230110c.bindTooltip(
+                `<div>
+                     Cluster 3 | Elettronica Expert | 755 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b438efb7399af0fad7cf01a1d64fd66b = L.circleMarker(
+                [39.35355683455352, 16.176084908075143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_b438efb7399af0fad7cf01a1d64fd66b.bindTooltip(
+                `<div>
+                     Cluster 0 | Bar Commenda | 133 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05ffe7ebac60772be49d32f43d38dc61 = L.circleMarker(
+                [39.347959508325786, 16.173064640736186],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_05ffe7ebac60772be49d32f43d38dc61.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Farmacia Commenda | 79 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_811701b4d086ea359128fa895bfe5921 = L.circleMarker(
+                [39.34482686721313, 16.176084186816524],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_811701b4d086ea359128fa895bfe5921.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Pizzeria Commenda | 239 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8400f2afd829002e2beb4b0dd7bf47b4 = L.circleMarker(
+                [39.35046763473631, 16.179614109699397],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_8400f2afd829002e2beb4b0dd7bf47b4.bindTooltip(
+                `<div>
+                     Cluster 1 | Supermercato Dok | 124 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c6bc52d104378d08d3fcc09569f5364 = L.circleMarker(
+                [39.34433746905009, 16.174892521882672],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_1c6bc52d104378d08d3fcc09569f5364.bindTooltip(
+                `<div>
+                     ⚫ Isolato | Parrucchiere Style | 177 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de627348470af42d34e6ccfede411e34 = L.circleMarker(
+                [39.34862659078502, 16.179693930967442],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_02092f99340ea27d2969270035ad9231);
+        
+    
+            circle_marker_de627348470af42d34e6ccfede411e34.bindTooltip(
+                `<div>
+                     Cluster 1 | Estetista Beauty | 141 persone/giorno
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_c05e78ff5a6b927429c11498706a0ed4.addTo(map_02092f99340ea27d2969270035ad9231);
+        
+</script>
+</html>
